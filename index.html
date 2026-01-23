@@ -5,75 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Video Library</title>
 <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background: #333;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-nav {
-  background: #444;
-  overflow: hidden;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-nav li {
-  float: left;
-  position: relative;
-}
-nav li a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 14px 20px;
-}
-nav li:hover {
-  background-color: #555;
-}
-nav li ul {
-  display: none;
-  position: absolute;
-  background-color: #555;
-  min-width: 160px;
-  z-index: 1;
-}
-nav li:hover ul {
-  display: block;
-}
-nav li ul li {
-  float: none;
-}
-.content {
-  padding: 2rem;
-}
-video {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-.caption {
-  font-style: italic;
-  margin-bottom: 2rem;
-}
+body { font-family: Arial, sans-serif; margin:0; padding:0; }
+header { background:#333; color:white; text-align:center; padding:1rem; }
+nav { background:#444; overflow:hidden; }
+nav ul { list-style-type:none; margin:0; padding:0; }
+nav li { float:left; position:relative; }
+nav li a { display:block; color:white; text-decoration:none; padding:14px 20px; }
+nav li:hover { background-color:#555; }
+nav li ul { display:none; position:absolute; background-color:#555; min-width:160px; z-index:1; }
+nav li:hover ul { display:block; }
+nav li ul li { float:none; }
+.content { padding:2rem; }
 </style>
 </head>
 <body>
 
 <header>
   <h1>Welcome to My Video Library</h1>
-  <p>Click a menu to view videos</p>
+  <p>Use the menus above to select a video.</p>
 </header>
 
 <nav>
   <ul>
+    <!-- Figure Number Menu -->
     <li><a href="#">Figure Number</a>
       <ul>
         <li><a href="figure1.html">Figure 1</a></li>
@@ -81,10 +35,13 @@ video {
         <li><a href="figure3.html">Figure 3</a></li>
       </ul>
     </li>
+
+    <!-- Type Menu -->
     <li><a href="#">Type</a>
       <ul>
-        <li><a href="typeA.html">Type A</a></li>
-        <li><a href="typeB.html">Type B</a></li>
+        <li><a href="figure1.html">Risso's Feeding</a></li>
+        <li><a href="figure2.html">Type B</a></li>
+        <li><a href="figure3.html">Type C</a></li>
       </ul>
     </li>
   </ul>
@@ -92,7 +49,7 @@ video {
 
 <div class="content">
   <h2>Welcome!</h2>
-  <p>Select a figure or type from the menu to watch videos.</p>
+  <p>Select a figure number or a type from the menu to watch videos.</p>
 </div>
 
 </body>
