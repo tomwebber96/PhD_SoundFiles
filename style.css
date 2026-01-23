@@ -1,14 +1,15 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  background: #f8f9fa;
-  color: #333;
+body::before {
+  content: "Updating...";
+  display: block;
+  text-align: center;
+  color: #0077cc; /* blue accent */
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 15px; /* space between text and content */
 }
 
 header {
-  background: #0077cc;
+  background: #99cfff; /* paler blue */
   color: white;
   padding: 20px;
   text-align: center;
@@ -17,7 +18,7 @@ header {
 }
 
 h1, h2 {
-  color: #0077cc;
+  color: #99cfff; /* paler blue */
 }
 
 form {
@@ -39,7 +40,7 @@ video {
 .figure-video {
   width: 100%;       /* fills the container */
   max-width: 900px;  /* caps the width */
-  border: 2px solid #0077cc;
+  border: 2px solid #99cfff; /* paler blue */
   border-radius: 8px;
 }
 
@@ -47,4 +48,12 @@ video {
   background: white;
   padding: 20px;
   border-radius: 10px;
+}
+
+/* Always visible "Updating..." text */
+.updating-text {
+  color: #0077cc; /* keeps a nice blue accent */
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 15px; /* some space below it */
 }
