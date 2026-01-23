@@ -3,53 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Video Figures</title>
+  <title>Video Figures</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to Video Figures</h1>
+  <h1>Video Figures Home</h1>
 
   <h2>Search by Figure Number</h2>
   <form onsubmit="return searchVideo('figure')">
-    <input type="text" id="figureInput" placeholder="Enter figure number">
+    <input type="text" id="figureInput" placeholder="Enter figure number (1-5)">
     <button type="submit">Go</button>
   </form>
 
   <h2>Search by Sound File</h2>
   <form onsubmit="return searchVideo('sound')">
-    <input type="text" id="soundInput" placeholder="Enter sound file">
+    <input type="text" id="soundInput" placeholder="Enter sound file (1-5)">
     <button type="submit">Go</button>
   </form>
 
-  <div id="videoContainer" style="margin-top: 30px;"></div>
-
   <script>
-    let captions = {};
-
-    // Load captions from JSON
-    fetch('captions.json')
-      .then(response => response.json())
-      .then(data => { captions = data; })
-      .catch(err => console.error("Failed to load captions:", err));
+    const figures = {
+      "1": "figure1.html",
+      "2": "figure2.html",
+      "3": "figure3.html",
+      "4": "figure4.html",
+      "5": "figure5.html"
+    };
 
     function searchVideo(type) {
       const value = document.getElementById(type + 'Input').value.trim();
-      const container = document.getElementById('videoContainer');
-
-      if (captions[value]) {
-        container.innerHTML = `
-          <h2>Figure ${value}</h2>
-          <video width="480" controls>
-            <source src="videos/figure${value}.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>${captions[value]}</p>
-          <a href="#" onclick="document.getElementById('videoContainer').innerHTML='';return false;">Back to Search</a>
-        `;
+      if (figures[value]) {
+        window.location.href = figures[value];
       } else {
         alert("Figure/Sound not found!");
       }
-      return false; // Prevent form submit
+      return false;
     }
   </script>
 </body>
