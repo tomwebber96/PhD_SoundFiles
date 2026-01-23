@@ -1,20 +1,23 @@
-body::before {
-  content: "Updating...";
-  display: block;
-  text-align: center;
-  color: #0077cc; /* blue accent */
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 15px; /* space between text and content */
-}
-
+/* Always visible "Updating..." text on top of header */
 header {
   background: #99cfff; /* paler blue */
   color: white;
-  padding: 20px;
+  padding: 40px 20px 20px 20px; /* extra top padding for "Updating..." */
   text-align: center;
   border-radius: 10px;
   margin-bottom: 30px;
+  position: relative; /* needed for positioning updating text */
+}
+
+header::before {
+  content: "Updating...";
+  position: absolute;
+  top: 10px; /* distance from top of header */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0077cc; /* blue accent */
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 h1, h2 {
@@ -49,4 +52,3 @@ video {
   padding: 20px;
   border-radius: 10px;
 }
-
