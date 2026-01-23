@@ -36,6 +36,13 @@ video {
   border-radius: 5px;
 }
 
+.figure-video {
+  width: 100%;       /* fills the container */
+  max-width: 900px;  /* caps the width */
+  border: 2px solid #0077cc;
+  border-radius: 8px;
+}
+
 .container {
   background: white;
   padding: 20px;
