@@ -1,6 +1,6 @@
 /* Always visible "Updating..." text on top of header */
 header {
-  background: #99cfff; /* paler blue */
+  background: #41597D; /* paler blue */
   color: white;
   padding: 40px 20px 20px 20px; /* extra top padding for "Updating..." */
   text-align: center;
@@ -21,7 +21,7 @@ header::before {
 }
 
 h1, h2 {
-  color: #99cfff; /* paler blue */
+  color: #284573; /* paler blue */
 }
 
 form {
