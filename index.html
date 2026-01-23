@@ -3,50 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Figures</title>
+  <title>Dynamic Video Figures</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to the Video Figures</h1>
+  <h1>Welcome to Video Figures</h1>
 
   <h2>Search by Figure Number</h2>
-  <form onsubmit="return searchFigure()">
+  <form onsubmit="return searchVideo('figure')">
     <input type="text" id="figureInput" placeholder="Enter figure number">
     <button type="submit">Go</button>
   </form>
 
   <h2>Search by Sound File</h2>
-  <form onsubmit="return searchSound()">
+  <form onsubmit="return searchVideo('sound')">
     <input type="text" id="soundInput" placeholder="Enter sound file">
     <button type="submit">Go</button>
   </form>
 
+  <div id="videoContainer" style="margin-top: 30px;"></div>
+
   <script>
-    // Map figure numbers/sound names to pages
-    const figures = {
-      "1": "figure1.html",
-      "2": "figure2.html"
-      // Add more as needed
-    };
+    let captions = {};
 
-    function searchFigure() {
-      const value = document.getElementById('figureInput').value.trim();
-      if (figures[value]) {
-        window.location.href = figures[value];
-      } else {
-        alert("Figure not found!");
-      }
-      return false;
-    }
+    // Load captions from JSON
+    fetch('captions.json')
+      .then(response => response.json())
+      .then(data => { captions = data; })
+      .catch(err => console.error("Failed to load captions:", err));
 
-    function searchSound() {
-      const value = document.getElementById('soundInput').value.trim();
-      if (figures[value]) {
-        window.location.href = figures[value];
+    function searchVideo(type) {
+      const value = document.getElementById(type + 'Input').value.trim();
+      const container = document.getElementById('videoContainer');
+
+      if (captions[value]) {
+        container.innerHTML = `
+          <h2>Figure ${value}</h2>
+          <video width="480" controls>
+            <source src="videos/figure${value}.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>${captions[value]}</p>
+          <a href="#" onclick="document.getElementById('videoContainer').innerHTML='';return false;">Back to Search</a>
+        `;
       } else {
-        alert("Sound file not found!");
+        alert("Figure/Sound not found!");
       }
-      return false;
+      return false; // Prevent form submit
     }
   </script>
 </body>
