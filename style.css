@@ -50,10 +50,3 @@ video {
   border-radius: 10px;
 }
 
-/* Always visible "Updating..." text */
-.updating-text {
-  color: #0077cc; /* keeps a nice blue accent */
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 15px; /* some space below it */
-}
