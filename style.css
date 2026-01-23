@@ -3,26 +3,41 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 20px;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 h1, h2 {
-  color: #333;
+  color: #0077cc;
 }
 
 form {
   margin-bottom: 20px;
 }
 
-input {
-  padding: 5px;
-  margin-right: 10px;
-}
-
-button {
+select, button {
   padding: 5px 10px;
+  margin-right: 10px;
 }
 
 video {
   display: block;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
 }
