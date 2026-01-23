@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Video Library</title>
+<title>Figure 1 - Risso's Feeding</title>
 <style>
 body { font-family: Arial, sans-serif; margin:0; padding:0; }
 header { background:#333; color:white; text-align:center; padding:1rem; }
@@ -16,15 +16,18 @@ nav li ul { display:none; position:absolute; background-color:#555; min-width:16
 nav li:hover ul { display:block; }
 nav li ul li { float:none; }
 .content { padding:2rem; }
+video { max-width:100%; margin-bottom:1rem; }
+.caption { font-style:italic; margin-bottom:2rem; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Welcome to My Video Library</h1>
+  <h1>My Video Library</h1>
   <p>Use the menus above to select a video.</p>
 </header>
 
+<!-- COPY THIS NAV FROM INDEX.HTML -->
 <nav>
   <ul>
     <!-- Figure Number Menu -->
@@ -47,9 +50,17 @@ nav li ul li { float:none; }
   </ul>
 </nav>
 
+<!-- VIDEO CONTENT -->
 <div class="content">
-  <h2>Welcome!</h2>
-  <p>Select a figure number or a type from the menu to watch videos.</p>
+  <h2>Figure 1 - Risso's Feeding</h2>
+
+  <video controls>
+    <source src="videos/figure1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="caption">Figure 1: Risso's Feeding</div>
+  <p><a href="index.html">Back to Home</a></p>
 </div>
 
 </body>
