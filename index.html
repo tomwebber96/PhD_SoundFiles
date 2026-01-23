@@ -7,35 +7,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Video Figures Home</h1>
+  <header>
+    <h1>Video Figures Collection</h1>
+  </header>
 
-  <h2>Search by Figure Number</h2>
-  <form onsubmit="return searchVideo('figure')">
-    <input type="text" id="figureInput" placeholder="Enter figure number (1-5)">
-    <button type="submit">Go</button>
-  </form>
+  <div class="container">
+    <h2>Select by Figure Number</h2>
+    <form onsubmit="return search('figure')">
+      <select id="figureSelect">
+        <option value="">--Choose Figure--</option>
+        <option value="figure1.html">Figure 1</option>
+      </select>
+      <button type="submit">Go</button>
+    </form>
 
-  <h2>Search by Sound File</h2>
-  <form onsubmit="return searchVideo('sound')">
-    <input type="text" id="soundInput" placeholder="Enter sound file (1-5)">
-    <button type="submit">Go</button>
-  </form>
+    <h2>Select by Type</h2>
+    <form onsubmit="return search('type')">
+      <select id="typeSelect">
+        <option value="">--Choose Type--</option>
+        <option value="figure1.html">Risso's Feeding</option>
+      </select>
+      <button type="submit">Go</button>
+    </form>
+  </div>
 
   <script>
-    const figures = {
-      "1": "figure1.html",
-      "2": "figure2.html",
-      "3": "figure3.html",
-      "4": "figure4.html",
-      "5": "figure5.html"
-    };
-
-    function searchVideo(type) {
-      const value = document.getElementById(type + 'Input').value.trim();
-      if (figures[value]) {
-        window.location.href = figures[value];
+    function search(type) {
+      const selectId = type === 'figure' ? 'figureSelect' : 'typeSelect';
+      const value = document.getElementById(selectId).value;
+      if (value) {
+        window.location.href = value;
       } else {
-        alert("Figure/Sound not found!");
+        alert("Please select an option!");
       }
       return false;
     }
