@@ -15,13 +15,13 @@ header::before {
   top: 10px; /* distance from top of header */
   left: 50%;
   transform: translateX(-50%);
-  color: #0077cc; /* blue accent */
+  color: #FFFFFF; /* blue accent */
   font-weight: bold;
   font-size: 1.2em;
 }
 
 h1, h2 {
-  color: #284573; /* paler blue */
+  color: #84ade3; /* paler blue */
 }
 
 form {
@@ -43,7 +43,7 @@ video {
 .figure-video {
   width: 100%;       /* fills the container */
   max-width: 900px;  /* caps the width */
-  border: 2px solid #99cfff; /* paler blue */
+  border: 2px solid #84ade3; /* paler blue */
   border-radius: 8px;
 }
 
