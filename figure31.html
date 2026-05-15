@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figure 31: Risso's Dolphin Vocalisations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Figure 31: Risso's Dolphin Vocalisations</h1>
+  </header>
+  <div class="container">
+
+    <video class="figure-video" controls>
+      <source src="videos/figure31_RDTop.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video class="figure-video" controls>
+      <source src="videos/figure31_RDMid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video class="figure-video" controls>
+      <source src="videos/figure31_RDBottom.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p>Figure 31: Example of Risso's dolphin vocalisations. Click train and buzz (Top - slowed by 0.5), burst pulse calls (Middle - slowed by 0.5), and whistles (bottom).</p>
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <script>
+    // Set volume to 50% for all videos
+    document.querySelectorAll('.figure-video').forEach(video => {
+      video.volume = 0.5;
+    });
+  </script>
+</body>
+</html>
