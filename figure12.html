@@ -10,23 +10,32 @@
   <header>
     <h1>Figure 12: Spectral Banding.</h1>
   </header>
-
   <div class="container">
-    <video id="video1" class="figure-video" controls>
+
+    <video class="figure-video" controls>
       <source src="videos/figure12RD.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video class="figure-video" controls>
       <source src="videos/figure12WB.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video class="figure-video" controls>
       <source src="videos/figure12CD.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <p>Figure 12: Spectral baning in Risso's (A) and white-beaked dolphin (B), clearly absent in common dolphin (C).</p>
 
+    <p>Figure 12: Spectral banding in Risso's (A) and white-beaked dolphin (B), clearly absent in common dolphin (C).</p>
     <a href="index.html">Back to Home</a>
   </div>
 
   <script>
-    // Set volume to 50%
-    const video = document.getElementById('video1');
-    video.volume = 0.5;
+    // Set volume to 50% for all videos
+    document.querySelectorAll('.figure-video').forEach(video => {
+      video.volume = 0.5;
+    });
   </script>
 </body>
 </html>
