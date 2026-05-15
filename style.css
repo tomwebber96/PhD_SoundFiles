@@ -10,7 +10,7 @@ header {
 }
 
 header::before {
-  content: "Playback of PhD Spectrogram Figures";
+  content: "Playback of Spectrogram Figures";
   position: absolute;
   top: 10px; /* distance from top of header */
   left: 50%;
