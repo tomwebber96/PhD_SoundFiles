@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figure 32 - Spectral Banding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Figure 32: Spectral Banding</h1>
+  </header>
+  <div class="container">
+
+    <video class="figure-video" controls>
+      <source src="videos/figure12RD.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video class="figure-video" controls>
+      <source src="videos/figure12WB.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video class="figure-video" controls>
+      <source src="videos/figure12CD.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p>Figure 32: Spectral banding in Risso's (Top - slowed by 0.5) and white-beaked dolphin (Middle - slowed by 0.5), clearly absent in common dolphin (Bottom).</p>
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <script>
+    // Set volume to 50% for all videos
+    document.querySelectorAll('.figure-video').forEach(video => {
+      video.volume = 0.5;
+    });
+  </script>
+</body>
+</html>
